@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NURBEK DIGITAL — veb-sayt yaratish, Instagram, Telegram, PUBG Mobile UC, Meta Verified va raqamli xizmatlar."
+    />
+    <meta property="og:title" content="NURBEK DIGITAL" />
+    <meta
+      property="og:description"
+      content="Sayt yaratish, ijtimoiy tarmoqlar va raqamli xizmatlar — barchasi bir joyda!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ulugbekqurbonboyev55-rgb.github.io/nurbek-digital/" />
+    <meta property="og:image" content="https://ulugbekqurbonboyev55-rgb.github.io/nurbek-digital/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NURBEK DIGITAL" />
+    <meta
+      name="twitter:description"
+      content="G‘oyangizni zamonaviy raqamli yechimga aylantiramiz!"
+    />
+    <link rel="canonical" href="https://ulugbekqurbonboyev55-rgb.github.io/nurbek-digital/" />
+    <title>NURBEK DIGITAL | Zamonaviy saytlar va raqamli xizmatlar</title>
+    <style>
+      :root {
+        --bg: #070b18;
+        --bg-soft: #0d152d;
+        --panel: rgba(13, 21, 45, 0.88);
+        --panel-strong: #121d38;
+        --card: rgba(18, 29, 56, 0.82);
+        --text: #edf2ff;
+        --muted: #a8b3d4;
+        --primary: #7c5cff;
+        --primary-2: #4cc9f0;
+        --accent: #8b5cf6;
+        --success: #36d399;
+        --warning: #fbbf24;
+        --danger: #fb7185;
+        --border: rgba(255,255,255,0.09);
+        --shadow: 0 18px 45px rgba(14, 20, 40, 0.5);
+        --max: 1180px;
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(124,92,255,0.18), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(76,201,240,0.15), transparent 25%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button, input {
+        font: inherit;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        backdrop-filter: blur(12px);
+        background: rgba(7, 11, 24, 0.7);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+        gap: 20px;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: var(--text);
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        color: #fff;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        box-shadow: 0 10px 28px rgba(124,92,255,0.45);
+        font-size: 1.1rem;
+      }
+
+      .nav-center {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .nav a {
+        color: var(--muted);
+        transition: color 0.2s ease;
+      }
+
+      .nav a:hover,
+      .nav a:focus-visible {
+        color: var(--text);
+      }
+
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 10px 18px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        color: #fff;
+        font-weight: 700;
+        box-shadow: 0 12px 28px rgba(124,92,255,0.35);
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 46px;
+        height: 46px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: transparent;
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      .hero {
+        padding: 72px 0 28px;
+      }
+
+      .hero-wrap {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(124,92,255,0.14);
+        border: 1px solid rgba(124,92,255,0.28);
+        color: #d8d0ff;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 22px 0 18px;
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        line-height: 1.05;
+        letter-spacing: -0.06em;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #fff 5%, #b3c7ff 35%, #7be0ff 68%, #b78cff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .lead {
+        max-width: 650px;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 28px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 14px 22px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        font-weight: 700;
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        color: #fff;
+        box-shadow: 0 16px 32px rgba(124,92,255,0.28);
+      }
+
+      .btn-secondary {
+        background: rgba(255,255,255,0.03);
+        border-color: rgba(255,255,255,0.08);
+        color: var(--text);
+      }
+
+      .hero-card {
+        position: relative;
+        padding: 24px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(16, 25, 48, 0.9), rgba(9, 13, 26, 0.9));
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .mini-panel {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        padding: 10px 12px;
+        background: rgba(76, 201, 240, 0.12);
+        border: 1px solid rgba(76, 201, 240, 0.3);
+        border-radius: 12px;
+        font-size: 0.8rem;
+      }
+
+      .mockup {
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(18,29,56,1), rgba(12,16,29,1));
+        border: 1px solid rgba(255,255,255,0.08);
+        overflow: hidden;
+      }
+
+      .mockup-top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.3);
+      }
+
+      .dot.red { background: #ff5f57; }
+      .dot.yellow { background: #febc2e; }
+      .dot.green { background: #28c840; }
+
+      .mockup-body {
+        padding: 22px 18px 18px;
+      }
+
+      .stat-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .mini-stat {
+        padding: 18px 16px;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--border);
+      }
+
+      .mini-stat strong {
+        display: block;
+        font-size: 1.32rem;
+        margin-bottom: 8px;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        letter-spacing: -0.05em;
+      }
+
+      .section-title p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 600px;
+      }
+
+      .service-overview {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .overview-card {
+        position: relative;
+        padding: 24px 20px;
+        border-radius: 22px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .overview-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary), var(--primary-2));
+        border-radius: 18px 18px 0 0;
+      }
+
+      .overview-card .icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(124,92,255,0.15), rgba(76,201,240,0.1));
+        color: var(--primary-2);
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+      }
+
+      .overview-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+      }
+
+      .overview-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .service-tools {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .search-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1 1 320px;
+        max-width: 480px;
+        padding: 12px 16px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: rgba(12,15,26,0.6);
+      }
+
+      .search-box input {
+        flex: 1;
+        background: transparent;
+        border: 0;
+        outline: none;
+        color: var(--text);
+      }
+
+      .filter-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.02);
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 9px 14px;
+        cursor: pointer;
+      }
+
+      .chip.active {
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        color: #fff;
+        border-color: transparent;
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .package-grid,
+      .service-grid,
+      .portfolio-grid,
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .card-header {
+        padding: 18px 18px 12px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 11px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        background: rgba(124,92,255,0.12);
+        border: 1px solid rgba(124,92,255,0.24);
+        color: #d8d0ff;
+      }
+
+      .price {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .card-body {
+        padding: 20px 18px 18px;
+      }
+
+      .card-body h3 {
+        margin: 0 0 10px;
+        font-size: 1.32rem;
+      }
+
+      .card-body p {
+        margin: 0 0 16px;
+        color: var(--muted);
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 18px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .feature-list li {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+        color: var(--text);
+      }
+
+      .feature-list li::before {
+        content: "✓";
+        color: var(--success);
+        font-weight: 700;
+      }
+
+      .card-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .price-inline {
+        font-size: 1.2rem;
+        font-weight: 800;
+      }
+
+      .small-btn {
+        min-height: 44px;
+        padding: 11px 16px;
+        border-radius: 12px;
+        cursor: pointer;
+        border: 1px solid rgba(255,255,255,0.06);
+        background: linear-gradient(135deg, #7b5cff, #4cc9f0);
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .offer-banner {
+        margin-top: 16px;
+        border-radius: 28px;
+        padding: 26px 20px;
+        background: linear-gradient(135deg, rgba(124,92,255,0.12), rgba(76,201,240,0.12));
+        border: 1px solid rgba(124,92,255,0.25);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .offer-banner strong {
+        display: block;
+        font-size: clamp(1.3rem, 3vw, 2.2rem);
+        letter-spacing: -0.04em;
+      }
+
+      .offer-banner p {
+        margin: 8px 0 0;
+        color: var(--muted);
+      }
+
+      .portfolio-card {
+        background: rgba(16,23,38,0.9);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        overflow: hidden;
+      }
+
+      .portfolio-thumb {
+        aspect-ratio: 16/10;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(76,201,240,0.14));
+        padding: 16px;
+      }
+
+      .portfolio-thumb .thumb-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(124,92,255,0.26), rgba(11,19,35,0.8));
+        border: 1px solid rgba(255,255,255,0.06);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .thumb-box::before,
+      .thumb-box::after {
+        content: "";
+        position: absolute;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.08);
+      }
+
+      .thumb-box::before {
+        inset: 20% 30% 18% 12%;
+      }
+
+      .thumb-box::after {
+        inset: 12% 14% 26% 38%;
+        background: rgba(76,201,240,0.2);
+      }
+
+      .portfolio-body {
+        padding: 18px;
+      }
+
+      .portfolio-body h3 {
+        margin: 0 0 10px;
+        font-size: 1.25rem;
+      }
+
+      .portfolio-body p {
+        color: var(--muted);
+        margin: 0 0 18px;
+      }
+
+      .about-wrap {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 26px;
+        align-items: center;
+      }
+
+      .profile-box {
+        border-radius: 28px;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(18,29,56,1), rgba(10,14,24,1));
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .profile-visual {
+        height: 360px;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at center, rgba(124,92,255,0.22), transparent 35%),
+          linear-gradient(135deg, rgba(17,29,52,0.95), rgba(7,11,26,0.95));
+      }
+
+      .profile-avatar {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(135deg, rgba(124,92,255,0.3), rgba(76,201,240,0.15));
+        font-size: 4rem;
+        box-shadow: 0 18px 35px rgba(124,92,255,0.25);
+      }
+
+      .profile-info {
+        padding: 22px 22px 18px;
+      }
+
+      .profile-info h3 {
+        margin: 0 0 10px;
+      }
+
+      .profile-info p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .skill {
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--text);
+        background: rgba(255,255,255,0.03);
+      }
+
+      .contact-box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .contact-card {
+        background: var(--card);
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        padding: 22px 18px;
+      }
+
+      .contact-card h3 {
+        margin: 0 0 10px;
+      }
+
+      .contact-card p,
+      .contact-card a {
+        color: var(--muted);
+      }
+
+      .order-box {
+        display: grid;
+        gap: 16px;
+      }
+
+      .dark-box {
+        background: linear-gradient(180deg, rgba(18,29,56,1), rgba(12,18,30,1));
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 22px 18px;
+      }
+
+      .faq {
+        display: grid;
+        gap: 14px;
+      }
+
+      .faq-item {
+        background: rgba(14,20,35,0.85);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: transparent;
+        color: var(--text);
+        border: 0;
+        padding: 18px 20px;
+        font-size: 1.02rem;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 0 20px 18px;
+        color: var(--muted);
+      }
+
+      .faq-item.open .faq-answer {
+        display: block;
+      }
+
+      .faq-item.open .faq-question span:last-child {
+        transform: rotate(45deg);
+      }
+
+      footer {
+        background: rgba(7, 11, 24, 0.9);
+        border-top: 1px solid var(--border);
+        padding: 28px 0 18px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+        gap: 26px;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+
+      .footer-nav {
+        display: grid;
+        gap: 10px;
+      }
+
+      .footer-nav a {
+        color: var(--muted);
+      }
+
+      .footer-meta {
+        color: var(--muted);
+        display: grid;
+        gap: 8px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid var(--border);
+        margin-top: 24px;
+        padding-top: 18px;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      @media (max-width: 980px) {
+        .hero-wrap,
+        .about-wrap,
+        .package-grid,
+        .service-grid,
+        .portfolio-grid,
+        .contact-grid,
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-wrap,
+        .about-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-center {
+          display: none;
+          position: absolute;
+          left: 16px;
+          right: 16px;
+          top: 76px;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 20px 18px;
+          border-radius: 18px;
+          background: rgba(8, 11, 20, 0.96);
+          border: 1px solid var(--border);
+        }
+
+        .nav.open .nav-center {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .nav-cta {
+          display: none;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .service-overview,
+        .package-grid,
+        .service-grid,
+        .portfolio-grid,
+        .contact-grid,
+        .footer-grid,
+        .contact-box {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          align-items: flex-start;
+          flex-direction: column;
+          margin-bottom: 18px;
+        }
+
+        .hero {
+          padding-top: 52px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .hero-actions .btn {
+          width: 100%;
+        }
+
+        .stat-boxes {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .search-box {
+          max-width: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="top">
+      <div class="container nav" id="nav">
+        <a href="#top" class="logo" aria-label="NURBEK DIGITAL bosh sahifa">
+          <span class="logo-mark">N</span>
+          <span>NURBEK DIGITAL</span>
+        </a>
+
+        <nav class="nav-center" aria-label="Asosiy navigatsiya">
+          <a href="#top">Bosh sahifa</a>
+          <a href="#services">Xizmatlar</a>
+          <a href="#packages">Sayt paketlari</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#about">Men haqimda</a>
+          <a href="#contact">Aloqa</a>
+        </nav>
+
+        <a class="nav-cta" href="#contact">Buyurtma berish</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menyu ochish">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-wrap">
+          <div>
+            <span class="eyebrow">NURBEK DIGITAL</span>
+            <h1>
+              Biznesingiz uchun <span class="gradient-text">zamonaviy saytlar</span> va raqamli xizmatlar!
+            </h1>
+            <p class="lead">
+              Men Nurbek Yandashovman. Zamonaviy veb-saytlar yarataman va raqamli xizmatlar taklif qilaman.
+              O‘zingizga mos xizmatni tanlang va Telegram orqali bog‘laning.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#services">Xizmatlarni ko‘rish</a>
+              <a class="btn btn-secondary" href="#packages">Sayt paketlari</a>
+              <a class="btn btn-secondary" href="https://t.me/Nurbek_yandashov" target="_blank" rel="noreferrer">Telegram orqali bog‘lanish</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Sayt ko‘rinishi">
+            <div class="mini-panel">Premium digital work</div>
+            <div class="mockup">
+              <div class="mockup-top">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="mockup-body">
+                <div class="card-header" style="padding: 0; border-bottom: 0; margin-bottom: 18px;">
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--muted);">NURBEK DIGITAL</div>
+                    <div style="font-weight: 800; font-size: 1.4rem;">Growth dashboard</div>
+                  </div>
+                  <span class="tag">Live</span>
+                </div>
+
+                <div class="stat-boxes">
+                  <div class="mini-stat">
+                    <strong>18+</strong>
+                    <span style="color: var(--muted);">Proyekt ishlanma</span>
+                  </div>
+                  <div class="mini-stat">
+                    <strong>100+</strong>
+                    <span style="color: var(--muted);">Bajarilgan xizmat</span>
+                  </div>
+                  <div class="mini-stat">
+                    <strong>5.0</strong>
+                    <span style="color: var(--muted);">Mijoz fikri</span>
+                  </div>
+                  <div class="mini-stat">
+                    <strong>24/7</strong>
+                    <span style="color: var(--muted);">Aloqa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Raqamli xizmatlar</h2>
+            <p>Instagram, Telegram, UC paketlari, Meta Verified va veb-saytlar — barchasi bir joyda.</p>
+          </div>
+
+          <div class="service-overview">
+            <article class="overview-card">
+              <div class="icon">🌐</div>
+              <h3>Veb-sayt yaratish</h3>
+              <p>Biznes, do‘kon va shaxsiy brend uchun zamonaviy launch-ready saytlar.</p>
+            </article>
+            <article class="overview-card">
+              <div class="icon">📸</div>
+              <h3>Instagram xizmatlari</h3>
+              <p>Obunachi, ko‘rish va layklar uchun xizmatlar mavjud.</p>
+            </article>
+            <article class="overview-card">
+              <div class="icon">💬</div>
+              <h3>Telegram xizmatlari</h3>
+              <p>Obunachi va kanal rivojlanishi uchun aniq tariflar.</p>
+            </article>
+            <article class="overview-card">
+              <div class="icon">🎮</div>
+              <h3>PUBG Mobile UC</h3>
+              <p>Tez va qulay UC paketlari; hafta, kunlik va maxsus takliflar.</p>
+            </article>
+            <article class="overview-card">
+              <div class="icon">✅</div>
+              <h3>Meta Verified</h3>
+              <p>Instagram uchun rasmiy obuna va tasdiqlangan akkaunt yechimi.</p>
+            </article>
+            <article class="overview-card">
+              <div class="icon">🛠️</div>
+              <h3>Men yaratgan loyihalar</h3>
+              <p>Aktual ishlangan portfolli loyihalar va sahifalar.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="packages">
+        <div class="container">
+          <div class="section-title">
+            <h2>Veb-sayt yaratish xizmatlari</h2>
+            <p>Biznes, do‘kon, ta’lim markazi, shaxsiy brend va boshqa loyihalar uchun zamonaviy veb-saytlar yarataman.</p>
+          </div>
+
+          <div class="service-tools">
+            <label class="search-box" aria-label="Xizmatlar bo‘yicha qidiruv">
+              <span>🔎</span>
+              <input id="serviceSearch" type="search" placeholder="Xizmatni qidiring..." />
+            </label>
+
+            <div class="filter-list" aria-label="Kategoriyalar bo‘yicha filtrlash">
+              <button class="chip active" data-filter="all" type="button">Barchasi</button>
+              <button class="chip" data-filter="website" type="button">Veb-sayt</button>
+              <button class="chip" data-filter="instagram" type="button">Instagram</button>
+              <button class="chip" data-filter="telegram" type="button">Telegram</button>
+              <button class="chip" data-filter="pubg" type="button">PUBG</button>
+              <button class="chip" data-filter="meta" type="button">Meta</button>
+            </div>
+          </div>
+
+          <div id="websitePackageGrid" class="grid package-grid"></div>
+
+          <div class="offer-banner">
+            <div>
+              <strong>MAXSUS TAKLIF — 600 000 SO‘MLIK BONUS!</strong>
+              <p>Sayt buyurtma qilish bo‘yicha maxsus bonus taklifi. Bonusning tarkibi va olish shartlarini buyurtma berishdan oldin aniqlashtiring.</p>
+            </div>
+            <a class="btn btn-primary" href="https://t.me/Nurbek_yandashov" target="_blank" rel="noreferrer">Buyurtma berish</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Instagram xizmatlari</h2>
+            <p>Natijalar, mavjudlik va xizmatlar oldindan aniqlashtirilishi mumkin. Asossiz kafolatlar bermaymiz.</p>
+          </div>
+          <div id="instagramServiceGrid" class="grid service-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Telegram xizmatlari</h2>
+            <p>Quyidagi narxlar belgilangan va 1 000 ta obunachi narxi aynan 15 000 so‘m.</p>
+          </div>
+          <div id="telegramServiceGrid" class="grid service-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>PUBG Mobile UC paketlari</h2>
+            <p>Quyidagi paketlar aynan ko‘rsatilgan UC miqdori va narx asosida taqdim etiladi.</p>
+          </div>
+          <div id="pubgServiceGrid" class="grid service-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Instagram Meta Verified obuna xizmatlari</h2>
+            <p>Ko‘rsatilgan narxlar bir oylik obuna bo‘yicha taqdim etilgan ma‘lumotlardir. Meta Verified mavjudligi va narxi akkaunt, hudud va boshqa shartlarga qarab farq qilishi mumkin.</p>
+          </div>
+          <div id="metaServiceGrid" class="grid service-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="portfolio">
+        <div class="container">
+          <div class="section-title">
+            <h2>Men yaratgan loyihalar</h2>
+            <p>Quyida men ishlab chiqqan veb-saytlar bilan tanishishingiz mumkin.</p>
+          </div>
+
+          <div id="portfolioGrid" class="portfolio-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>Men haqimda</h2>
+            <p>Men Nurbek Yandashovman. IT sohasida faoliyat yuritaman va veb-saytlar yaratish bilan shug‘ullanaman.</p>
+          </div>
+
+          <div class="about-wrap">
+            <div class="profile-box">
+              <div class="profile-visual">
+                <div class="profile-avatar">N</div>
+              </div>
+              <div class="profile-info">
+                <h3>Nurbek Yandashov Sherali o‘g‘li</h3>
+                <p>
+                  Men Nurbek Yandashovman. Toshkent axborot texnologiyalari universitetida dasturiy injiniring yo‘nalishida 1-kursda tahsil olaman. IT sohasida faoliyat yuritaman va veb-saytlar yaratish, zamonaviy raqamli yechimlarni ishlab chiqish hamda dasturlash bo‘yicha bilim va tajribamni oshirib boryapman.
+                </p>
+                <div class="skills">
+                  <span class="skill">Veb-sayt yaratish</span>
+                  <span class="skill">HTML, CSS va JavaScript</span>
+                  <span class="skill">Responsive dizayn</span>
+                  <span class="skill">Biznes uchun veb-sahifalar</span>
+                  <span class="skill">Raqamli xizmatlar</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-box">
+              <div class="dark-box">
+                <h3 style="margin: 0 0 12px;">Nima uchun men?</h3>
+                <p style="margin: 0; color: var(--muted);">
+                  Men zamonaviy, professional va mobilga mos saytlar yarataman. Har bir loyiha uchun kerakli imkoniyatlar, sifat va oson boshqaruvni hisobga olaman.
+                </p>
+              </div>
+              <div class="dark-box">
+                <h3 style="margin: 0 0 12px;">Kichik loyihalardan tortib premium veb-saytlargacha</h3>
+                <p style="margin: 0; color: var(--muted);">
+                  Har qanday maqsad uchun sayt yoki raqamli xizmatni tanlashda, sizga to‘g‘ri yechimni moslashtiraman.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Men bilan bog‘laning</h2>
+            <p>Buyurtma qilish uchun Telegram yoki telefon orqali bog‘laning.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Kontakt ma’lumotlari</h3>
+              <p><strong>Ism:</strong> Nurbek Yandashov Sherali o‘g‘li</p>
+              <p><strong>Telefon:</strong> <a href="tel:+998946834986">+998 94 683 49 86</a></p>
+              <p><strong>Telegram:</strong> <a href="https://t.me/Nurbek_yandashov" target="_blank" rel="noreferrer">@Nurbek_yandashov</a></p>
+            </div>
+
+            <div class="contact-card">
+              <h3>Tez aloqa</h3>
+              <div class="hero-actions" style="margin-top: 0; flex-direction: column; align-items: stretch;">
+                <a class="btn btn-primary" href="https://t.me/Nurbek_yandashov" target="_blank" rel="noreferrer">Telegram orqali yozish</a>
+                <a class="btn btn-secondary" href="tel:+998946834986">Telefon qilish</a>
+                <a class="btn btn-secondary" href="#packages">Xizmatlar narxini ko‘rish</a>
+                <button class="btn btn-secondary order-all" type="button">Buyurtma berish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>FAQ — Ko‘p beriladigan savollar</h2>
+            <p>Quyidagi savollar va javoblar sizga tezkor ma’lumot beradi.</p>
+          </div>
+
+          <div class="faq" id="faq"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <span class="logo-mark" style="width: 32px; height: 32px; font-size: 0.94rem;">N</span>
+              <span>NURBEK DIGITAL</span>
+            </div>
+            <p style="margin: 0; color: var(--muted);">Zamonaviy saytlar va raqamli xizmatlar.</p>
+          </div>
+
+          <div>
+            <h3 style="margin: 0 0 14px;">Havolalar</h3>
+            <div class="footer-nav">
+              <a href="#top">Bosh sahifa</a>
+              <a href="#services">Xizmatlar</a>
+              <a href="#portfolio">Portfolio</a>
+              <a href="#about">Men haqimda</a>
+              <a href="#contact">Aloqa</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="margin: 0 0 14px;">Kontakt</h3>
+            <div class="footer-meta">
+              <span>Telefon: +998 94 683 49 86</span>
+              <span>Telegram: @Nurbek_yandashov</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="margin: 0 0 14px;">Tez aloqa</h3>
+            <div class="footer-meta">
+              <a href="https://t.me/Nurbek_yandashov" target="_blank" rel="noreferrer">Telegram orqali yozish</a>
+              <a href="tel:+998946834986">Telefon qilish</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">© 2026 NURBEK DIGITAL. Barcha huquqlar himoyalangan.</div>
+      </div>
+    </footer>
+
+    <script>
+      const websitePackages = [
+        {
+          name: 'START',
+          price: '$100',
+          description: 'Oddiy bir sahifali sayt. Shaxsiy sahifa, xizmat reklamasi yoki kichik loyiha uchun.',
+          features: ['Bir sahifa dizayni', 'Mobil moslashuv', 'Kontakt va Telegram tugmalari', 'Oddiy brend elementlari'],
+          category: 'website'
+        },
+        {
+          name: 'STANDARD',
+          price: '$150',
+          description: 'Zamonaviy landing page, xizmatlar bo‘limi va aloqa tugmalari.',
+          features: ['Landing page dizayni', 'Xizmatlar bloki', 'Aloqa va CTA', 'Responsive bo‘limlar'],
+          category: 'website'
+        },
+        {
+          name: 'BUSINESS',
+          price: '$200',
+          description: 'Kichik biznes uchun bir nechta bo‘limdan iborat sayt.',
+          features: ['Ko‘p bo‘limli struktura', 'Portfolio va xizmatlar', 'Aloqa formasi', 'Premium uyga mos dizayn'],
+          category: 'website'
+        },
+        {
+          name: 'PRO',
+          price: '$250',
+          description: 'Kengaytirilgan dizayn, xizmat kartalari va qo‘shimcha bo‘limlar.',
+          features: ['Kengaytirilgan xizmatlar', 'Yaxshi vizual ketma-ketlik', 'Ajoyib hover effektlari', 'Katta kontent bo‘limlari'],
+          category: 'website'
+        },
+        {
+          name: 'PREMIUM',
+          price: '$300',
+          description: 'Premium dizayn, animatsiyalar va individual ko‘rinish.',
+          features: ['Premium stil', 'Shaffof va dinamik bloklar', 'Ajoyib animatsiyalar', 'Professional veb-brend'],
+          category: 'website'
+        },
+        {
+          name: 'SHOP',
+          price: '$350',
+          description: 'Mahsulotlar katalogi, narxlar va buyurtma uchun interfeys.',
+          features: ['Mahsulot kartalari', 'Narxlar bo‘limi', 'Buyurtma UX', 'Katalogli layout'],
+          category: 'website'
+        },
+        {
+          name: 'PRO BUSINESS',
+          price: '$400',
+          description: 'Kengaytirilgan biznes sayti, portfolio va xizmatlar katalogi.',
+          features: ['Portfolio bo‘limi', 'Kataloglar va xizmatlar', 'Katta sahifalar', 'Branding dizayni'],
+          category: 'website'
+        },
+        {
+          name: 'ELITE',
+          price: '$450',
+          description: 'Individual dizayn, ko‘proq sahifalar va qo‘shimcha frontend imkoniyatlari.',
+          features: ['Maxsus UI/UX', 'Keng sahifa tuzilmasi', 'Moslashuvli komponentlar', 'Kreativ konsept'],
+          category: 'website'
+        },
+        {
+          name: 'ULTIMATE',
+          price: '$480',
+          description: 'Murakkabroq tuzilishga ega individual loyiha.',
+          features: ['Murakkab boshqaruv', 'Ko‘proq sahifalar', 'Keng funksiya bazasi', 'Yuqori darajadagi dizayn'],
+          category: 'website'
+        },
+        {
+          name: 'EXCLUSIVE',
+          price: '$500',
+          description: 'Mijoz talabiga mos premium veb-sayt loyihasi.',
+          features: ['Individual yechim', 'Maqsadli brend dizayni', 'Kopirayt va UX', 'Premium loyiha ishlovi'],
+          category: 'website'
+        }
+      ];
+
+      const instagramServices = [
+        { name: '1 000 ta obunachi', price: '35 000 so‘m', category: 'instagram' },
+        { name: '1 000 ta ko‘rish (view)', price: '1 000 so‘m', category: 'instagram' },
+        { name: '1 000 ta layk', price: '10 000 so‘m', category: 'instagram' }
+      ];
+
+      const telegramServices = [
+        { name: '1 000 ta obunachi', price: '15 000 so‘m', category: 'telegram' },
+        { name: '2 000 ta obunachi', price: '25 000 so‘m', category: 'telegram' },
+        { name: '4 000 ta obunachi', price: '50 000 so‘m', category: 'telegram' },
+        { name: '5 000 ta obunachi', price: '60 000 so‘m', category: 'telegram' },
+        { name: '10 000 ta obunachi', price: '100 000 so‘m', category: 'telegram' },
+        { name: '30 000 ta obunachi', price: '180 000 so‘m', category: 'telegram' },
+        { name: '50 000 ta obunachi', price: '300 000 so‘m', category: 'telegram' },
+        { name: '100 000 ta obunachi', price: '500 000 so‘m', category: 'telegram' },
+        { name: '200 000 ta obunachi', price: '1 000 000 so‘m', category: 'telegram' }
+      ];
+
+      const pubgServices = [
+        { name: '60 UC', price: '13 000 so‘m', category: 'pubg' },
+        { name: '120 UC', price: '28 000 so‘m', category: 'pubg' },
+        { name: '180 UC', price: '42 000 so‘m', category: 'pubg' },
+        { name: '325 UC', price: '66 000 so‘m', category: 'pubg' },
+        { name: '385 UC', price: '79 000 so‘m', category: 'pubg' },
+        { name: '660 UC', price: '125 000 so‘m', category: 'pubg' },
+        { name: '985 UC', price: '190 000 so‘m', category: 'pubg' },
+        { name: '1 320 UC', price: '250 000 so‘m', category: 'pubg' },
+        { name: '1 800 UC', price: '330 000 so‘m', category: 'pubg' },
+        { name: '2 125 UC', price: '395 000 so‘m', category: 'pubg' },
+        { name: '3 850 UC', price: '595 000 so‘m', category: 'pubg' },
+        { name: '8 100 UC', price: '1 280 000 so‘m', category: 'pubg' }
+      ];
+
+      const metaServices = [
+        { name: 'Birinchi marta uchun', price: '15 000 so‘m', category: 'meta' },
+        { name: 'Oddiy shaxsiy akkaunt (Web)', price: '120 000 so‘m', category: 'meta' },
+        { name: 'Biznes Standard', price: '200 000 so‘m', category: 'meta' },
+        { name: 'Biznes Plus', price: '585 000 so‘m', category: 'meta' },
+        { name: 'Biznes Premium', price: '1 600 000 so‘m', category: 'meta' },
+        { name: 'Biznes Max', price: '4 500 000 so‘m', category: 'meta' }
+      ];
+
+      const portfolioItems = [
+        {
+          name: 'Kompyuter yig‘ish',
+          url: 'https://nurbekyandashov1-ship-it.github.io/kompyuter-yigish/',
+          description: 'Kompyuter yig‘ish va kompyuter qismlariga oid loyiha.',
+          color: 'purple'
+        },
+        {
+          name: 'Ziyo Lider Akademiyasi',
+          url: 'https://nurbekyandashov1-ship-it.github.io/Ziyo-lider-akademiyasi/',
+          description: 'Ta’lim markazi uchun yaratilgan veb-sayt loyihasi.',
+          color: 'cyan'
+        },
+        {
+          name: 'Sayt yaratish',
+          url: 'https://nurbekyandashov1-ship-it.github.io/sayt-yaratsh/',
+          description: 'Veb-sayt yaratish xizmatlarini namoyish qiluvchi loyiha.',
+          color: 'violet'
+        }
+      ];
+
+      const faqData = [
+        { q: 'Sayt yaratish narxi qancha?', a: 'Sayt paketlari 100 dollardan boshlanadi. Yakuniy narx loyiha talablari va tanlangan paketga bog‘liq.' },
+        { q: 'Saytga buyurtma qanday beraman?', a: 'Kerakli xizmatni tanlab, Telegram orqali bog‘lanishingiz mumkin.' },
+        { q: 'Sayt qancha vaqtda tayyor bo‘ladi?', a: 'Muddat loyiha hajmi va murakkabligiga qarab kelishiladi.' },
+        { q: 'Telefon orqali ham foydalanish mumkinmi?', a: 'Ha, sayt telefon, planshet va kompyuter uchun moslashtiriladi.' },
+        { q: 'PUBG UC yoki boshqa xizmatlarga qanday buyurtma beraman?', a: 'Kerakli paketni tanlab, Telegram orqali mavjudligi va shartlarini aniqlashtiring.' },
+        { q: 'Sayt Google’da chiqadimi?', a: 'Sayt Google indeksatsiyasi uchun tayyorlanishi mumkin, ammo qidiruv natijalarida paydo bo‘lishi va reytingi kafolatlanmaydi.' }
+      ];
+
+      function renderWebsitePackages() {
+        const grid = document.getElementById('websitePackageGrid');
+        grid.innerHTML = websitePackages.map(pkg => `
+          <article class="card" data-category="${pkg.category}">
+            <div class="card-header">
+              <span class="tag">${pkg.name}</span>
+              <span class="price">${pkg.price}</span>
+            </div>
+            <div class="card-body">
+              <h3>${pkg.name}</h3>
+              <p>${pkg.description}</p>
+              <ul class="feature-list">
+                ${pkg.features.map(feature => `<li>${feature}</li>`).join('')}
+              </ul>
+              <div class="card-actions">
+                <span class="price-inline">${pkg.price}</span>
+                <button class="small-btn order-button" type="button" data-title="${pkg.name}" data-price="${pkg.price}">Buyurtma berish</button>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      function renderSimpleCards(containerId, items, typeLabel) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = items.map(item => `
+          <article class="card" data-category="${item.category}">
+            <div class="card-header">
+              <span class="tag">${typeLabel}</span>
+              <span class="price">${item.price}</span>
+            </div>
+            <div class="card-body">
+              <h3>${item.name}</h3>
+              <p>${item.description || 'Mavjud bo‘lgan xizmat. Buyurtma berishdan oldin shartlarni aniqlashtiring.'}</p>
+              <div class="card-actions">
+                <span class="price-inline">${item.price}</span>
+                <button class="small-btn order-button" type="button" data-title="${item.name}" data-price="${item.price}">Buyurtma berish</button>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      function renderInstagramServices() {
+        renderSimpleCards('instagramServiceGrid', instagramServices, 'Instagram');
+      }
+
+      function renderTelegramServices() {
+        renderSimpleCards('telegramServiceGrid', telegramServices, 'Telegram');
+      }
+
+      function renderPubgServices() {
+        renderSimpleCards('pubgServiceGrid', pubgServices, 'PUBG');
+      }
+
+      function renderMetaServices() {
+        renderSimpleCards('metaServiceGrid', metaServices, 'Meta Verified');
+      }
+
+      function renderPortfolio() {
+        const grid = document.getElementById('portfolioGrid');
+        grid.innerHTML = portfolioItems.map(item => `
+          <article class="portfolio-card">
+            <div class="portfolio-thumb">
+              <div class="thumb-box" style="background: linear-gradient(135deg, rgba(124,92,255,0.28), rgba(76,201,240,0.18));"></div>
+            </div>
+            <div class="portfolio-body">
+              <h3>${item.name}</h3>
+              <p>${item.description}</p>
+              <a class="btn btn-primary" href="${item.url}" target="_blank" rel="noreferrer">Saytni ko‘rish</a>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      function renderFaq() {
+        const faq = document.getElementById('faq');
+        faq.innerHTML = faqData.map((item, index) => `
+          <div class="faq-item ${index === 0 ? 'open' : ''}">
+            <button class="faq-question" type="button">
+              <span>${item.q}</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">${item.a}</div>
+          </div>
+        `).join('');
+
+        faq.querySelectorAll('.faq-question').forEach(button => {
+          button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('open');
+            button.querySelector('span:last-child').textContent = item.classList.contains('open') ? '−' : '+';
+          });
+        });
+      }
+
+      function setupFilters() {
+        const searchInput = document.getElementById('serviceSearch');
+        const chips = document.querySelectorAll('.chip');
+        const allCards = document.querySelectorAll('[data-category]');
+
+        let activeFilter = 'all';
+
+        const applyFilter = () => {
+          const query = searchInput.value.trim().toLowerCase();
+
+          allCards.forEach(card => {
+            const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const category = card.dataset.category;
+            const matchesFilter = activeFilter === 'all' || category === activeFilter;
+            const matchesSearch = !query || title.includes(query);
+            card.classList.toggle('hidden', !(matchesFilter && matchesSearch));
+          });
+        };
+
+        searchInput.addEventListener('input', applyFilter);
+
+        chips.forEach(chip => {
+          chip.addEventListener('click', () => {
+            chips.forEach(item => item.classList.toggle('active', item === chip));
+            activeFilter = chip.dataset.filter;
+            applyFilter();
+          });
+        });
+      }
+
+      function handleOrderButtons() {
+        document.querySelectorAll('.order-button, .order-all').forEach(button => {
+          button.addEventListener('click', (event) => {
+            const title = event.currentTarget.dataset.title || 'Xizmat';
+            const price = event.currentTarget.dataset.price || 'Noma’lum';
+            const text = `Salom, men ${title} xizmatini buyurtma qilmoqchiman. Narx: ${price}. Menga batafsil ma’lumot bering.`;
+
+            const telegramUrl = `https://t.me/Nurbek_yandashov?text=${encodeURIComponent(text)}`;
+
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(text).catch(() => {});
+            }
+
+            window.open(telegramUrl, '_blank', 'noopener,noreferrer');
+          });
+        });
+      }
+
+      function setupMobileMenu() {
+        const nav = document.getElementById('nav');
+        const toggle = document.getElementById('menuToggle');
+        toggle.addEventListener('click', () => {
+          nav.classList.toggle('open');
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => nav.classList.remove('open'));
+        });
+      }
+
+      renderWebsitePackages();
+      renderInstagramServices();
+      renderTelegramServices();
+      renderPubgServices();
+      renderMetaServices();
+      renderPortfolio();
+      renderFaq();
+      setupFilters();
+      handleOrderButtons();
+      setupMobileMenu();
+    </script>
+  </body>
+</html>
